@@ -516,6 +516,21 @@ body { background: var(--white); }
 
 
 
+.popular-card {
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.popular-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.popular-card:hover img {
+  transform: scale(1.1);
+}
 
 
 /*-----------------------------------*\
@@ -892,8 +907,7 @@ address {
 
   .helpline-box .icon-box { padding: 14px; }
 
-  .header-top .logo img { max-width: unset; }
-
+  .header-top .logo img { max-width: unset;}
   .search-btn { font-size: 30px; }
 
   .nav-open-btn { font-size: 40px; }
