@@ -253,7 +253,7 @@ body { background: var(--white); }
 
 .header-top .logo { margin-inline: auto; }
 
-.header-top .logo img { max-width: 100px; }
+.header-top .logo img { max-width: 200px; }
 
 .header-btn-group {
   justify-self: flex-end;
@@ -327,7 +327,7 @@ body { background: var(--white); }
   padding: 40px 15px;
 }
 
-.navbar-top .logo img { width: 150px; }
+.navbar-top .logo img { width: 200px; }
 
 .nav-close-btn {
   font-size: 20px;
@@ -375,7 +375,7 @@ body { background: var(--white); }
 \*-----------------------------------*/
 
 .hero {
-  background-image: url("../images/tourists-take-boat-ban-rak-thai-village-mae-hong-son-province-thailand.jpg");
+  background-image: url("../images/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -907,7 +907,7 @@ address {
 
   .helpline-box .icon-box { padding: 14px; }
 
-  .header-top .logo img { max-width: unset;}
+  .header-top .logo img { max-width: 200px;}
   .search-btn { font-size: 30px; }
 
   .nav-open-btn { font-size: 40px; }
