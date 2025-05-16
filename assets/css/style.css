@@ -837,15 +837,15 @@ address {
 .go-top {
   position: fixed;
   bottom: 15px;
-  right: 15px;
-  width: 35px;
-  height: 35px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
   background: var(--bright-navy-blue);
   color: var(--white);
   display: grid;
   place-items: center;
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 30px;
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.5);
   opacity: 0;
   transform: translateY(10px);
@@ -1316,4 +1316,33 @@ address {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+/* Backtowa */
+.back-to-wa {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  line-height: 40px;
+  margin-bottom: 30px;
+  background-color: rgb(0, 178, 0);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  z-index: 99;
+  color: var(--white);
+}
+.back-to-wa:hover {
+  color: green;
+  background: transparent;
 }

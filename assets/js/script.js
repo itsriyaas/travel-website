@@ -44,3 +44,21 @@ window.addEventListener("scroll", function () {
   }
 
 });
+//logo support
+window.addEventListener('scroll', function () {
+    const mainLogo = document.getElementById('main-logo');
+    const mobileLogo = document.getElementById('mobile-logo');
+    const scrollThreshold = 50; // px
+
+    if (window.scrollY > scrollThreshold) {
+      mainLogo.src = '/assets/images/logo_white.png';
+      if (mobileLogo) {
+        mobileLogo.src = '/assets/images/logo_white.png';
+      }
+    } else {
+      mainLogo.src = '/assets/images/logo_black.png';
+      if (mobileLogo) {
+        mobileLogo.src = './assets/images/logo_black.png';
+      }
+    }
+  });
