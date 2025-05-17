@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Website</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/flight.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+<style>
+    .navbar-link{
+        color: black;
+    }
+    .helpline-number{
+        color: black;
+    }
+    .helpline-title{
+        color: black;
+    }
+    .carousel-section {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  max-width: 1000px; /* Adjust as needed */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 500px; /* Set a fixed height */
+  position: relative;
+  flex-shrink: 0;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .carousel-slide {
+    height: 300px;
+  }
+
+  .carousel-caption {
+    font-size: 1rem;
+    padding: 6px 10px;
+    left: 10px;
+    bottom: 8px;
+  }
+
+  .carousel-btn {
+    font-size: 20px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide {
+    height: 220px;
+  }
+
+  .carousel-caption {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+
+  .carousel-btn {
+    font-size: 18px;
+    padding: 6px;
+  }
+}
+
+</style>
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+
+        <a href="tel:+919074418863" class="helpline-box">
+
+          <div class="icon-box">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+
+          <div class="wrapper">
+            <p class="helpline-title">For Further Inquires :</p>
+
+            <p class="helpline-number">+91 9074418863</p>
+          </div>
+
+        </a>
+
+        <a href="/index.html" class="logo">
+  <img src="/assets/images/logo_black.png" alt="Brand logo" id="main-logo">
+</a>
+
+
+        <div class="header-btn-group">
+
+          
+
+          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline" style="color: grey;"></ion-icon>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.facebook.com/sahayathri.ijk/" class="social-link" target="_blank">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/sahayathritours/" class="social-link" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+            <a href="#" class="logo">
+              <img src="./assets/images/logo_black.png" alt="Brand logo">
+            </a>
+
+            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <ul class="navbar-list">
+
+            <li>
+              <a href="./index.html" class="navbar-link" data-nav-link>home</a>
+            </li>
+
+            <li>
+              <a href="./index.html#aboutus" class="navbar-link" data-nav-link>about us</a>
+            </li>
+
+            <li>
+              <a href="./index.html#destination" class="navbar-link" data-nav-link>destination</a>
+            </li>
+
+            <li>
+              <a href="./index.html#package" class="navbar-link" data-nav-link>packages</a>
+            </li>
+
+            <li>
+              <a href="./index.html#gallery" class="navbar-link" data-nav-link>gallery</a>
+            </li>
+
+            <li>
+              <a href="./index.html#contact" class="navbar-link" data-nav-link>contact us</a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+        <p><button class="btn btn-primary">Book Now</button></p>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main style="margin-top: 200px; margin-bottom: 50px;">
+    <div class="carousel-section">
+        <h2>Vietnam</h2>
+        <p style="color: grey;">Vietnam is a developing country with a lower-middle-income economy.</p>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tour Image 1" class="carousel-image">
+              <div class="carousel-caption">Hạ Long, Vietnam</div>
+            </div>
+      
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tour Image 2" class="carousel-image">
+              <div class="carousel-caption">Golden Bridge on Ba Na Hills, Vietnam, Da Nang</div>
+            </div>
+      
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tour Image 3" class="carousel-image">
+              <div class="carousel-caption">Ho Chi Minh City, Vietnam</div>
+            </div>
+      
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1526139334526-f591a54b477c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tour Image 4" class="carousel-image">
+              <div class="carousel-caption">Phu Quoc, Vietnam</div>
+            </div>
+      
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1555979864-7a8f9b4fddf8?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tour Image 5" class="carousel-image">
+              <div class="carousel-caption">Danang, Vietnam</div>
+            </div>
+      
+          </div>
+          <button class="carousel-btn prev">&#10094;</button>
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+      </div>
+      
+    <div style="text-align: center;">
+      <div class="dbutton"> <a href="/assets/pdf/HYDERABAD.pdf" download><button class="btn btn-primary">Download Package</button></a></div>
+     
+  <!-- Day 1 -->
+  <div class="section" style="margin-top: 50px;">
+    <h2>Day 01</h2>
+    <p><strong>Tour starts here...</strong></p>
+    <ul>
+      <li>Pick up from Railway Station</li>
+      <li>Visit Golconda Fort</li>
+      <li>After lunch: NTR Garden</li>
+      <li>Hussain Sagar Lake (Boating)</li>
+      <li>Lumbini Park</li>
+    </ul>
+    <p>Overnight stay at Hotel.</p>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="section">
+    <h2>Day 02</h2>
+    <p><strong>Ramoji Film City</strong></p>
+    <p>After breakfast, proceed to:</p>
+    <ul>
+      <li>Ramoji Film City (Spread over 1,666 acres, <br>certified by the Guinness World Records as the largest film studio complex in the world.<br> Built by Telugu film producer Ramoji Rao in 1996.)</li>
+      <li>Lunch inside Film City</li>
+    </ul>
+    <p>Overnight stay at Hotel.</p>
+  </div>
+
+  <!-- Day 3 -->
+  <div class="section">
+    <h2>Day 03</h2>
+    <p>After breakfast, visit:</p>
+    <ul>
+      <li>Birla Mandir</li>
+      <li>Salar Jung Museum</li>
+      <li>Charminar</li>
+      <li>Chowmahalla Palace</li>
+    </ul>
+    <p>Transfer to Railway Station.</p>
+  </div>
+
+  <!-- Tour Price -->
+  <div class="section">
+    <h2>Tour Price</h2>
+    <p class="price">Please contact us for pricing details.</p>
+  </div>
+
+  <!-- Includes -->
+  <div class="section">
+    <h2 style="color: green;">Tour Cost Includes</h2>
+    <ul>
+      <li>Breakfast and Dinner</li>
+      <li>Accommodation in 3-star hotel (1 room)</li>
+      <li>Sightseeing by AC Car</li>
+      <li>Cab for all 3 days</li>
+    </ul>
+  </div>
+
+  <!-- Excludes -->
+  <div class="section">
+    <h2 style="color: red;">Tour Cost Excludes</h2>
+    <ul>
+      <li>Train Ticket</li>
+      <li>Lunch</li>
+      <li>Entrance Tickets</li>
+    </ul>
+  </div>
+</div>
+  </main>
+
+  
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo_white.png" alt="Brand logo">
+          </a>
+
+          <p class="footer-text">
+            Book your next adventure with ease. Quick plans, instant bookings, and unforgettable experiences—start your
+            journey today !
+          </p>
+
+        </div>
+
+        <div class="footer-contact">
+
+          <h4 class="contact-title">Contact Us</h4>
+
+          <p class="contact-text">
+            Feel free to contact and reach us !!
+          </p>
+
+          <ul>
+
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+
+              <a href="tel:+919074418863" class="contact-link">+91 9074418863</a>
+            </li>
+
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+
+              <a href="mailto:www" class="contact-link">tour@planners.com</a>
+            </li>
+
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+
+              <address>Thrissur, Kerala</address>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-form">
+
+          <p class="form-text">
+            Subscribe our newsletter for more update & news !!
+          </p>
+
+          <form action="" class="form-wrapper">
+            <input type="email" name="email" class="input-field" placeholder="Enter Your Email" required>
+
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+         <p class="copyright">
+          &copy; 2025 <a href="https://thea-itsolutions.vercel.app/" style="color: rgb(255, 166, 0);">Thea IT Solutions</a>. All rights reserved
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Term & Condition</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">FAQ</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+    <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    let index = 0;
+  
+    function updateCarousel() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+  
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % 5;
+      updateCarousel();
+    });
+  
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + 5) % 5;
+      updateCarousel();
+    });
+  
+    // Optional: Auto-scroll every 5 seconds
+    setInterval(() => {
+      index = (index + 1) % 5;
+      updateCarousel();
+    }, 5000);
+    /* CARAOUSAL IMG MANAGE */
+    function updateCarousel() {
+  const width = document.querySelector('.carousel-container').offsetWidth;
+  track.style.transform = `translateX(-${index * width}px)`;
+}
+  </script>
+  
+
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
