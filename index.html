@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Website</title>
+  <title>Sahayathri Tour Planners</title>
 
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/flight.png" type="image/svg+xml">
+  <link rel="shortcut icon" href="/assets/images/16 x 16_pixel sahayathri logo.svg" type="image/svg+xml">
 
   <!-- 
     - custom css link
@@ -28,7 +28,131 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 </head>
+<style>
 
+.testimonial-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonial {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000000a0;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media (max-width: 600px) {
+  .quote {
+    font-size: 1rem;
+  }
+
+  .nav {
+    font-size: 20px;
+  }
+}
+/* Lightbox styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  box-shadow: 0 0 20px #fff;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.close-btn:hover {
+  color: #ccc;
+}
+
+
+</style>
 <body id="top">
 
   <!-- 
@@ -327,9 +451,7 @@
                     </div>
                   </div>
       
-                  <p class="price">
-                    ₹87,500 <span>/ per person</span>
-                  </p>
+                 <a href="/assets/pdf/Abhudabi,Dubai.pdf"><button class="btn btn-secondary">Download Itinerary</button></a><br>
       
                   <a href="whatsapp://send?phone=+919074418863&text=Enquiry%20:%20WONDERFUL%20-%20DUBAI%20AND%20ABU%20DHABI"><button class="btn btn-secondary">Book Now</button></a>
                 </div>
@@ -381,9 +503,7 @@
                     </div>
                   </div>
       
-                  <p class="price">
-                    ₹49,000 <span>/ per person</span>
-                  </p>
+                  <a href="/assets/pdf/Vietnam.pdf" download><button class="btn btn-secondary">Download Itinerary</button></a><br>
       
                   <a href="whatsapp://send?phone=+919074418863&text=Enquiry%20:%20Vietnam"><button class="btn btn-secondary">Book Now</button></a>
                 </div>
@@ -436,10 +556,7 @@
                     </div>
                   </div>
       
-                  <p class="price">
-                    ₹26,900 <span>/ per person</span>
-                  </p>
-      
+                      <a href="/assets/pdf/AMAZING THAILAND.pdf"><button class="btn btn-secondary">Download Itinerary</button></a><br>
                   <a href="whatsapp://send?phone=+919074418863&text=Enquiry%20:%20Pattaya&Thailand"><button class="btn btn-secondary">Book Now</button></a>
                 </div>
               </div>
@@ -456,50 +573,48 @@
       <!-- 
         - #GALLERY
       -->
+<section class="gallery" id="gallery">
+  <div class="container">
 
-      <section class="gallery" id="gallery">
-        <div class="container">
+    <p class="section-subtitle">Photo Gallery</p>
+    <h2 class="h2 section-title">Photo's From Travellers</h2>
 
-          <p class="section-subtitle">Photo Gallery</p>
+    <ul class="gallery-list">
+      <li class="gallery-item">
+        <figure class="gallery-image">
+          <img src="./assets/images/pic1.jpg" alt="Gallery image">
+        </figure>
+      </li>
+      <li class="gallery-item">
+        <figure class="gallery-image">
+          <img src="./assets/images/group.jpg" alt="Gallery image">
+        </figure>
+      </li>
+      <li class="gallery-item">
+        <figure class="gallery-image">
+          <img src="./assets/images/pic3.jpg" alt="Gallery image">
+        </figure>
+      </li>
+      <li class="gallery-item">
+        <figure class="gallery-image">
+          <img src="./assets/images/pic4.jpg" alt="Gallery image">
+        </figure>
+      </li>
+      <li class="gallery-item">
+        <figure class="gallery-image">
+          <img src="./assets/images/pic6.webp" alt="Gallery image">
+        </figure>
+      </li>
+    </ul>
+  </div>
+</section>
 
-          <h2 class="h2 section-title">Photo's From Travellers</h2>
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox">
+  <span class="close-btn" id="closeBtn">&times;</span>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="Full View">
+</div>
 
-          <ul class="gallery-list">
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/pic1.jpg" alt="Gallery image">
-              </figure>
-            </li>
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/pic2.jpg" alt="Gallery image">
-              </figure>
-            </li>
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/pic3.jpg" alt="Gallery image">
-              </figure>
-            </li>
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/pic4.jpg" alt="Gallery image">
-              </figure>
-            </li>
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/pic6.webp" alt="Gallery image">
-              </figure>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
 
 
 
@@ -518,9 +633,9 @@
             <h2 class="h2 section-title">Ready For Unforgatable Travel. Remember Us!</h2>
 
             <p class="section-text">
-              Embark on a journey of discovery with Sahayathri Tour Planners — where every upcoming becomes a memory,
-              and every moment, an adventure. From serene landscapes to cultural landmarks, we craft seamless travel
-              experiences tailored just for you
+             Sahayathri Tour Planners was born 16 years ago with a driven passion for travelling all over the world. We are located in Irinjalakuda, Thrissur, Kerala. Sahayathri Tour Planners is a idea of a single mind who is a passionate traveller, a strong independent woman Minija Gopi. From the first trip itself she knows that she will step her foot in every part of the world and she will be a "Sahayathri"(co-traveller) for thousands of people to travel across the world. <br>
+             
+             For the last 16 years  Sahayathri Tour Planners conducted over thousands of trips to various places including international, National and famous pilgrimages. We provide affordable packages, the best facilities, a comfortable journey and forever memories. The motto of Sahayathri Tour Planners is the happiness of our co-travellers and we fullfill that in every journey which made them join us again and again in our upcoming trips.
             </p>
           </div>
 
@@ -532,7 +647,43 @@
     </article>
   </main>
 
+<section class="testimonial-section">
+  <h2>Traveler Testimonials</h2>
+  <div class="carousel-container">
+    <div class="carousel-track">
 
+      <!-- Testimonial 1 -->
+      <div class="testimonial">
+        <div class="video-wrapper">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=276&href=https%3A%2F%2Fwww.facebook.com%2Fsahayathri.ijk%2Fvideos%2F709290528228954%2F&show_text=false&width=380&t=0" title="Traveler 1" allowfullscreen></iframe>
+        </div>
+        <p class="quote">"Thailand was a dream come true! Everything was perfectly organized!"</p>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial">
+        <div class="video-wrapper">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=200&href=https%3A%2F%2Fwww.facebook.com%2Fsahayathri.ijk%2Fvideos%2F1204603750896523%2F&show_text=false&width=380&t=0" title="Traveler 2" allowfullscreen></iframe>
+        </div>
+        <p class="quote">"Loved every moment in Thailand! Highly recommend their service."</p>
+       
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial">
+        <div class="video-wrapper">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=200&href=https%3A%2F%2Fwww.facebook.com%2Fsahayathri.ijk%2Fvideos%2F1093583325928090%2F&show_text=false&width=380&t=0" title="Traveler 3" allowfullscreen></iframe>
+        </div>
+        <p class="quote">"Mankulam Trip — an unforgettable experience!"</p>
+      </div>
+
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button class="nav prev">&#10094;</button>
+    <button class="nav next">&#10095;</button>
+  </div>
+</section>
 
 
 
@@ -612,7 +763,7 @@
       <div class="container">
 
         <p class="copyright">
-          &copy; 2025 <a href="https://theaitsolutions.net/" style="color: rgb(255, 166, 0);">Thea IT Solutions</a>. All rights reserved
+          &copy; 2025 Sahayathri Tour Planners | All rights reserved | Designed By <a href="https://theaitsolutions.net/" style="color: rgb(255, 166, 0);">Thea IT Solutions</a>
         </p>
 
         <ul class="footer-bottom-list">
@@ -667,6 +818,51 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+    const track = document.querySelector('.carousel-track');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const slides = document.querySelectorAll('.testimonial');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  const slideWidth = slides[0].offsetWidth;
+  track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateCarousel();
+});
+
+window.addEventListener('resize', updateCarousel);
+//gallery
+const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('closeBtn');
+
+  document.querySelectorAll('.gallery-image img').forEach(image => {
+    image.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = image.src;
+      lightboxImg.alt = image.alt;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
   </script>
 
 
