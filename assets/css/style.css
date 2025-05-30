@@ -1346,3 +1346,10 @@ address {
   color: green;
   background: transparent;
 }
+.contact-part{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}

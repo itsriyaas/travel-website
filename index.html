@@ -150,7 +150,64 @@
 .close-btn:hover {
   color: #ccc;
 }
+ .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 40px;
+      background-color: #f8f8f8;
+    }
 
+    .contact-info, .contact-form {
+      flex: 1 1 300px;
+      margin: 20px;
+    }
+
+    .contact-info h2, .contact-form h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+    }
+     .contact-info a {
+      color: black;
+    }
+    .contact-info a:hover {
+      color: rgb(0, 70, 105);
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    .contact-form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+  
+
+    @media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+        padding: 20px;
+      }
+    }
 
 </style>
 <body id="top">
@@ -212,8 +269,8 @@
             </a>
           </li>
 
-          <li>
-            <a href="https://www.youtube.com/@sahayathritourplanners168" class="social-link">
+            <li>
+            <a href="https://www.youtube.com/@sahayathritourplanners168" class="social-link" target="_blank">
               <ion-icon name="logo-youtube"></ion-icon>
             </a>
           </li>
@@ -241,7 +298,7 @@
             </li>
 
             <li>
-              <a href="#" class="navbar-link" data-nav-link>about us</a>
+              <a href="#about" class="navbar-link" data-nav-link>about us</a>
             </li>
 
             <li>
@@ -257,7 +314,7 @@
             </li>
 
             <li>
-              <a href="#contact" class="navbar-link" data-nav-link>contact us</a>
+              <a href="#contactus" class="navbar-link" data-nav-link>contact us</a>
             </li>
 
           </ul>
@@ -286,7 +343,7 @@
           <h1 class="h1 hero-title text-light">Journey to explore world</h2>
 
             <p class="hero-text">
-              Enjoy Your Vacation With Us , Explore. Relax. Discover Let us be the start of your next great story.
+              Explore, Relax, Discover. Enjoy Your Vacation With Us Let us be the start of your next great story.
             </p>
 
             <div class="btn-group">
@@ -309,12 +366,12 @@
       <section class="popular" id="upcoming" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
 
-          <p class="section-subtitle" data-aos="fade-right" data-aos-delay="100">Popular upcomings</p>
+            
 
           <h2 class="h2 section-title" data-aos="fade-left" data-aos-delay="200">Upcoming Packages</h2>
 
           <p class="section-text" data-aos="fade-up" data-aos-delay="300">
-            Discover breathtaking upcomings, immersive cultures, and unforgettable adventures.
+            Discover breathtaking tour packages, immersive cultures, and unforgettable adventures.
           </p>
 
           <ul class="popular-list">
@@ -379,7 +436,7 @@
 
           </ul>
 
-          <a href="/allpackages.html"><button class="btn btn-primary">More upcoming</button></a>
+          <a href="/allpackages.html"><button class="btn btn-primary">More upcoming packages</button></a>
 
         </div>
       </section>
@@ -392,8 +449,7 @@
 
       <section class="package" id="package" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-      
-          <p class="section-subtitle">Popular Packages</p>
+    
       
           <h2 class="h2 section-title">Checkout Our Packages</h2>
       
@@ -577,7 +633,7 @@
   <div class="container">
 
     <p class="section-subtitle">Photo Gallery</p>
-    <h2 class="h2 section-title">Photo's From Travellers</h2>
+    <h2 class="h2 section-title">Photos From Travellers</h2>
 
     <ul class="gallery-list">
       <li class="gallery-item">
@@ -624,22 +680,20 @@
         - #CTA
       -->
 
-      <section class="cta" id="contact">
+      <section class="cta" id="about">
         <div class="container">
 
           <div class="cta-content">
-            <p class="section-subtitle">Call To Action</p>
+            <p class="section-subtitle">About Us</p>
 
-            <h2 class="h2 section-title">Ready For Unforgatable Travel. Remember Us!</h2>
+            <h2 class="h2 section-title">Ready For Unforgettable Travel, Remember Us!</h2>
 
-            <p class="section-text">
-             Sahayathri Tour Planners was born 16 years ago with a driven passion for travelling all over the world. We are located in Irinjalakuda, Thrissur, Kerala. Sahayathri Tour Planners is a idea of a single mind who is a passionate traveller, a strong independent woman Minija Gopi. From the first trip itself she knows that she will step her foot in every part of the world and she will be a "Sahayathri"(co-traveller) for thousands of people to travel across the world. <br>
+            <p style="color: white;">
+             Sahayathri Tour Planners was born 16 years ago with a driven passion for travelling all over the world. We are located in Irinjalakuda, Thrissur, Kerala. Sahayathri Tour Planners is the idea of a single mind who is a passionate traveller, a strong independent woman, Minija Gopi. From the first trip itself she knows that she will step her foot in every part of the world and she will be a "Sahayathri"(co-traveller) for thousands of people to travel across the world. <br><br>
              
-             For the last 16 years  Sahayathri Tour Planners conducted over thousands of trips to various places including international, National and famous pilgrimages. We provide affordable packages, the best facilities, a comfortable journey and forever memories. The motto of Sahayathri Tour Planners is the happiness of our co-travellers and we fullfill that in every journey which made them join us again and again in our upcoming trips.
+             For the last 16 years  Sahayathri Tour Planners conducted over thousands of trips to various places including International, National and famous pilgrimages. We provide affordable packages, the best facilities, a comfortable journey and forever memories. The motto of Sahayathri Tour Planners is the happiness of our co-travellers and we fullfill that in every journey, which made them join us again and again in our upcoming trips.
             </p>
-          </div>
-
-          <a href="whatsapp://send?phone=+919074418863&text=enquiry"><button class="btn btn-secondary">Contact Us !</button></a>
+          
 
         </div>
       </section>
@@ -648,7 +702,7 @@
   </main>
 
 <section class="testimonial-section">
-  <h2>Traveler Testimonials</h2>
+  <h2 class="h2 section-title">Traveller Testimonials</h2>
   <div class="carousel-container">
     <div class="carousel-track">
 
@@ -685,6 +739,28 @@
   </div>
 </section>
 
+<!-- Contact  Us-->
+   <div class="contact-part" id="contactus">
+      <h2 class="h2 section-title">CONTACT US</h2>
+    </div>
+  <section class="contact-section">
+    <!-- Contact Info & Map -->
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/r8cUAYHrffaUfo2c9">Koonan's Building, Near National High School, Irinjalakuda,Thrissur,Kerala 680121</a></p>
+      <p><strong>Email:</strong> <a href="mailto:info@sahayathritourplanners.com">info@sahayathritourplanners.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:919074418863">+91 9074418863</a></p>
+
+      <!-- Embedded Google Map -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7461.343953358274!2d76.20088059999999!3d10.352171199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7f6419cda6dcf%3A0xf5bceaeb0fc6d094!2sSahayathri%20Tour%20Planners!5e1!3m2!1sen!2sin!4v1748605886152!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2 style="text-align: center;">Send Us a Message</h2>
+      <a href="whatsapp://send?phone=+919074418863&text=hello"><button class="btn btn-primary">CONTACT US</button></a>
+    </div>
+  </section>
 
 
   <!-- 
@@ -729,13 +805,15 @@
             <li class="contact-item">
               <ion-icon name="mail-outline"></ion-icon>
 
-              <a href="mailto:sahayathritours.ijk@gmail.com" class="contact-link">sahayathritours.ijk@gmail.com</a>
+              <a href="mailto:info@sahayathritourplanners.com
+" class="contact-link">info@sahayathritourplanners.com
+</a>
             </li>
 
             <li class="contact-item">
               <ion-icon name="location-outline" style=""></ion-icon>
 
-              <a href="https://maps.app.goo.gl/r8cUAYHrffaUfo2c9"><address>Koonan's Building, Near National High School, Irinjalakuda,Thrissur,Kerala 680121</address></a>
+              <a href="https://maps.app.goo.gl/r8cUAYHrffaUfo2c9" target="_blank"><address>Koonan's Building, Near National High School, Irinjalakuda,Thrissur,Kerala 680121</address></a>
             </li>
 
           </ul>
@@ -745,7 +823,7 @@
         <div class="footer-form">
 
           <p class="form-text">
-            Subscribe our newsletter for more update & news !!
+            Subscribe to our newsletter for more updates & news !!
           </p>
 
           <form action="" class="form-wrapper">
@@ -763,7 +841,7 @@
       <div class="container">
 
         <p class="copyright">
-          &copy; 2025 Sahayathri Tour Planners | All rights reserved | Designed By <a href="https://theaitsolutions.net/" style="color: rgb(255, 166, 0);">Thea IT Solutions</a>
+          &copy; 2025 Sahayathri Tour Planners | All rights reserved <br> Designed By <a href="https://theaitsolutions.net/" style="color: rgb(255, 166, 0);">Thea IT Solutions</a>
         </p>
 
         <ul class="footer-bottom-list">
