@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahayathri Tour Planners</title>
+
+  <!-- 
+    - favicon
+  -->
+ <link rel="shortcut icon" href="/assets/images/16 x 16_pixel sahayathri logo.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+<style>
+    .navbar-link{
+        color: black;
+    }
+    .helpline-number{
+        color: black;
+    }
+    .helpline-title{
+        color: black;
+    }
+    .carousel-section {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  max-width: 1000px; /* Adjust as needed */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 500px; /* Set a fixed height */
+  position: relative;
+  flex-shrink: 0;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .carousel-slide {
+    height: 300px;
+  }
+
+  .carousel-caption {
+    font-size: 1rem;
+    padding: 6px 10px;
+    left: 10px;
+    bottom: 8px;
+  }
+
+  .carousel-btn {
+    font-size: 20px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide {
+    height: 220px;
+  }
+
+  .carousel-caption {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+
+  .carousel-btn {
+    font-size: 18px;
+    padding: 6px;
+  }
+}
+
+</style>
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+
+        <a href="tel:+919074418863" class="helpline-box">
+
+          <div class="icon-box">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+
+          <div class="wrapper">
+            <p class="helpline-title">For Further Inquires :</p>
+
+            <p class="helpline-number">+91 9074418863</p>
+          </div>
+
+        </a>
+
+        <a href="/index.html" class="logo">
+  <img src="/assets/images/logo_black.png" alt="Brand logo" id="main-logo">
+</a>
+
+
+        <div class="header-btn-group">
+
+          
+
+          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline" style="color: grey;"></ion-icon>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.facebook.com/sahayathri.ijk/" class="social-link" target="_blank">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/sahayathritours/" class="social-link" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+            <li>
+            <a href="https://www.youtube.com/@sahayathritourplanners168" class="social-link" target="_blank">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+            <a href="#" class="logo">
+              <img src="./assets/images/logo_black.png" alt="Brand logo">
+            </a>
+
+            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <ul class="navbar-list">
+
+            <li>
+              <a href="./index.html" class="navbar-link" data-nav-link>home</a>
+            </li>
+
+            <li>
+              <a href="./index.html#aboutus" class="navbar-link" data-nav-link>about us</a>
+            </li>
+
+            <li>
+              <a href="/allpackages.html" class="navbar-link" data-nav-link>upcoming</a>
+            </li>
+
+            <li>
+              <a href="/alldestinations.html" class="navbar-link" data-nav-link>packages</a>
+            </li>
+
+            <li>
+              <a href="./index.html#gallery" class="navbar-link" data-nav-link>gallery</a>
+            </li>
+
+            <li>
+              <a href="./index.html#contactus" class="navbar-link" data-nav-link>contact us</a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+        <a href="whatsapp://send?phone=+919074418863&text=enquiry: Bali"><button class="btn btn-primary">Book now</button></a>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main style="margin-top: 200px; margin-bottom: 50px;">
+    <div class="carousel-section">
+        <h2>Bali</h2>
+        <p style="color: grey;"> Bali is a province of Indonesia and the westernmost of the Lesser Sunda Islands.</p>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            
+            <div class="carousel-slide">
+              <img src="https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tour Image 1" class="carousel-image">
+              <div class="carousel-caption">Balinese Hindu temple</div>
+            </div>
+      
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tour Image 2" class="carousel-image">
+             
+            </div>
+      
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tour Image 3" class="carousel-image">
+              <div class="carousel-caption">Bali, Indonesia</div>
+            </div>
+      
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tour Image 4" class="carousel-image">
+              <div class="carousel-caption">Nusa Penida, Klungkung Regency, Bali, Indonesia</div>
+            </div>
+      
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1501179691627-eeaa65ea017c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tour Image 5" class="carousel-image">
+              <div class="carousel-caption">Bali, Indonesia</div>
+            </div>
+      
+          </div>
+          <button class="carousel-btn prev">&#10094;</button>
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+      </div>
+      
+   <div style="text-align: center;">
+  <!-- Download Button -->
+  <div class="dbutton">
+    <a href="/assets/pdf/Bali.pdf" download>
+      <button class="btn btn-primary">Download Package</button>
+    </a>
+  </div>
+
+  <!-- Title -->
+  <div class="section" style="margin-top: 50px;">
+    <h2>WELCOME TO BALI</h2>
+    <p><strong>August</strong></p>
+  </div>
+
+  <!-- Day 1 -->
+  <div class="section">
+    <h2>Day 01</h2>
+    <p><strong>Departure from:</strong> Cochin / Trivandrum / Chennai International Airport.</p>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="section">
+    <h2>Day 02</h2>
+    <p><strong>Welcome to Bali</strong></p>
+    <ul>
+      <li>Visit GWK Cultural Park</li>
+      <li>Dinner and stay at hotel</li>
+    </ul>
+    <p><em>Garuda Wisnu Kencana (GWK) Cultural Park is home to Bali’s iconic 121-meter tall Vishnu-Garuda statue, <br> symbolizing Hindu mythology and Balinese artistry.</em></p>
+  </div>
+
+  <!-- Day 3 -->
+  <div class="section">
+    <h2>Day 03</h2>
+    <ul>
+      <li>Tanjung Benoa Beach & Turtle Island</li>
+      <li>Glass Bottom Boat Ride</li>
+      <li>Optional water sports (own cost)</li>
+      <li>Indian Lunch</li>
+      <li>Uluwatu Cliff Temple & Kecak Dance Show</li>
+      <li>Dinner and stay at hotel</li>
+    </ul>
+    <p><em>The Uluwatu Temple, sacred to Balinese Hindus, hosts the mesmerizing Kecak Dance at sunset <br> — a highlight of Balinese culture.</em></p>
+  </div>
+
+  <!-- Day 4 -->
+  <div class="section">
+    <h2>Day 04</h2>
+    <ul>
+      <li>Rice Terrace (Bali Swing entrance optional)</li>
+      <li>Kintamani Mount Batur Volcano View</li>
+      <li>Lunch</li>
+      <li>Coffee Plantation</li>
+      <li>Tampak Siring Holy Spring Temple (Tirta Empul)</li>
+      <li>Dinner and stay at hotel</li>
+    </ul>
+  </div>
+
+  <!-- Day 5 -->
+  <div class="section">
+    <h2>Day 05</h2>
+    <ul>
+      <li>Tanah Lot Temple</li>
+      <li>Indian Lunch</li>
+      <li>Ulundanu Beratan Temple</li>
+      <li>Indian Dinner and stay at hotel</li>
+    </ul>
+  </div>
+
+  <!-- Day 6 -->
+  <div class="section">
+    <h2>Day 06</h2>
+    <ul>
+      <li>Breakfast</li>
+      <li>Krishna Shopping</li>
+      <li>Departure transfer</li>
+    </ul>
+  </div>
+
+
+
+  <!-- Includes -->
+  <div class="section">
+    <h2 style="color: green;">Tour Cost Includes</h2>
+    <ul>
+      <li>4 nights stay in 4-star hotel</li>
+      <li>Breakfast, Indian Lunch & Indian Dinner</li>
+      <li>AC Private bus with English-speaking guide</li>
+      <li>Entrance Tickets, Kecak Dance Show & Glass Boat Ticket</li>
+      <li>Sightseeing as per itinerary</li>
+      <li>Mineral water on sightseeing days</li>
+    </ul>
+  </div>
+
+  <!-- Excludes -->
+  <div class="section">
+    <h2 style="color: red;">Tour Cost Excludes</h2>
+    <ul>
+      <li>Airfare and visa charges (Visa on arrival approx. USD 35)</li>
+      <li>Tips to the guide or driver</li>
+      <li>Meals other than those specified in inclusions</li>
+      <li>Travel insurance and other personal expenses</li>
+      <li>Anything not mentioned in the inclusions</li>
+    </ul>
+  </div>
+</div>
+
+  </main>
+
+  
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo_white.png" alt="Brand logo">
+          </a>
+
+          <p class="footer-text">
+            Book your next adventure with ease. Quick plans, instant bookings, and unforgettable experiences—start your
+            journey today !
+          </p>
+
+        </div>
+
+        <div class="footer-contact">
+
+          <h4 class="contact-title">Contact Us</h4>
+
+          <p class="contact-text">
+            Feel free to contact and reach us !!
+          </p>
+
+          <ul>
+
+           <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+
+              <a href="tel:+919074418863" class="contact-link">+91 9074418863</a>
+              <a href="tel:+919846586587" class="contact-link">+91 9846586587</a>
+            </li>
+
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+
+              <a href="mailto:info@sahayathritourplanners.com
+" class="contact-link">info@sahayathritourplanners.com
+</a>
+            </li>
+
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+
+              <a href="https://maps.app.goo.gl/r8cUAYHrffaUfo2c9" target="_blank"><address>Koonan's Building, Near National High School, Irinjalakuda,Thrissur,Kerala 680121</address></a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-form">
+
+          <p class="form-text">
+            Subscribe to our newsletter for more updates & news !!
+          </p>
+
+          <form action="" class="form-wrapper">
+            <input type="email" name="email" class="input-field" placeholder="Enter Your Email" required>
+
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+         <p class="copyright">
+          &copy; 2025 Sahayathri Tour Planners | All rights reserved | Designed By <a href="https://theaitsolutions.net/" style="color: rgb(255, 166, 0);">Thea IT Solutions</a>
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="/terms.html" class="footer-bottom-link">Cancellation Policy</a>
+          </li>
+
+          <li>
+            <a href="/terms.html" class="footer-bottom-link">Term & Condition</a>
+          </li>
+
+          <li>
+            <a href="/faq.html" class="footer-bottom-link">FAQ</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+    <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    let index = 0;
+  
+    function updateCarousel() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+  
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % 5;
+      updateCarousel();
+    });
+  
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + 5) % 5;
+      updateCarousel();
+    });
+  
+    // Optional: Auto-scroll every 5 seconds
+    setInterval(() => {
+      index = (index + 1) % 5;
+      updateCarousel();
+    }, 5000);
+    /* CARAOUSAL IMG MANAGE */
+    function updateCarousel() {
+  const width = document.querySelector('.carousel-container').offsetWidth;
+  track.style.transform = `translateX(-${index * width}px)`;
+}
+  </script>
+  
+
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
